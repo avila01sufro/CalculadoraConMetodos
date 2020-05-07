@@ -7,6 +7,7 @@ public class CalculadoraConMetodos {
 
     public static void main(String[] args){
         int opcion;
+
         do {
             opcion = menu();
             selecOperacion(opcion);
