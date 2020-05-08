@@ -19,7 +19,7 @@ public class CalculadoraConMetodos {
 
     }
 
-    static void menu() {
+    static void menu() { //Usa System.out.print para mostrar las opciones.
         System.out.println("Seleccione una operacion: "+"\n 1. Sumar"+" 2. Restar"+" 3. Multiplicar"+"\n 4. Dividir"+" 5. Encontrar mayor"+" 6. Calcular potencia"+" 7. Salir");
 
     }
@@ -83,9 +83,9 @@ public class CalculadoraConMetodos {
     }
 
      static void validacion_menu(){
-            /*los 2 metodos validadores funcionan en base a try-catch y do-while. si se comete un error,
-             la flag volvera a ser 0, por lo cual el bucle comenzara de nuevo. si los valores intriducidos
-             son correctos, flag seguira siendo 1, saliendo del bucle*/
+            /*Los 2 metodos validadores funcionan en base a try-catch y do-while. Si se comete un error,
+             la flag volverá a ser 0 y el bucle comenzará de nuevo. Si los valores introducidos
+             son correctos, flag seguirá siendo 1, terminando el bucle.*/
          int flag;
          do {
              flag=1;
@@ -104,6 +104,7 @@ public class CalculadoraConMetodos {
      }
 
      static void validacion_numeros(){
+        //Segundo método de validación.
          int flag;
         do {
             try {
@@ -121,7 +122,7 @@ public class CalculadoraConMetodos {
      }
 
     static float Suma(int num1, int num2) {
-        //Sumara 2 valores  enteros y los almacenara dentro de una variable float
+        //Suma dos valores enteros y los almacena dentro de una variable float.
         int suma = num1 + num2;
         return suma;
     }
@@ -142,7 +143,8 @@ public class CalculadoraConMetodos {
         // Divide dos valores enteros (el 2do número no puede ser 0), y devolverá un float como resultado.
 
             float div = (num1 / num2);
-            return div;}
+            return div;
+        }
 
     static float Comparacion(int num1, int num2) {
         // Compara ambos números con el condicional "if".
