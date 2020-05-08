@@ -23,6 +23,7 @@ public class CalculadoraConMetodos {
     }
 
     static float menu_opciones() {
+        //despues de validados los numeros y la opcion, se seleccionara con un “switch” la operación elegida
             float resultado=0;
         switch (opcion) {
 
@@ -101,21 +102,25 @@ public class CalculadoraConMetodos {
      }
 
     static float Suma(int num1, int num2) {
+        //Sumara 2 valores  enteros y los almacenara dentro de una variable float
         int suma = num1 + num2;
         return suma;
     }
 
     static float Resta(int num1, int num2) {
+        //Restara 2 Valores  enteros y los almacenara dentro de una variable int
         int resta = num1 - num2;
         return resta;
     }
 
     static float Multiplicacion(int num1, int num2) {
+        //Multiplicara 2 Valores enteros , devolviendo un int
         int mult = (num1 * num2);
         return mult;
     }
 
     static float Division(int num1, int num2) {
+        //Dividira 2 valores enteros (el sdo numero no puede ser 0) , devolvera un float
         float div = (num1 / num2);
         return div;
     }
