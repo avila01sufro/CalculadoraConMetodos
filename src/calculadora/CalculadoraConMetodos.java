@@ -7,14 +7,14 @@ public class CalculadoraConMetodos {
     static Scanner teclado = new Scanner(System.in);
     static int num1, num2, opcion;
     public static void main(String[] args) {
-            float resultado=0;
+            float resultadoF=0;
 
             while(opcion !=7) {
                 menu();
                 validacion_menu();
                 
-                resultado = menu_opciones();
-                System.out.println("La operacion retorna: " + resultado);
+                menu_opciones(resultadoF);
+                
             }
 
     }
@@ -24,39 +24,50 @@ public class CalculadoraConMetodos {
 
     }
 
-    static float menu_opciones() {
+    static float menu_opciones(float resol) {
         //despues de validados los numeros y la opcion, se seleccionara con un “switch” la operación elegida
-            float resultado=0;
+
         switch (opcion) {
 
             case 1:
                 validacion_numeros();
-                resultado=Suma(num1, num2);
+                resol = Suma(num1, num2);
+                MostrarResultadoFloat(resol);
                 break;
 
             case 2:
                 validacion_numeros();
-                resultado=Resta(num1, num2);
+                resol = Resta(num1, num2);
+                MostrarResultadoFloat(resol);
                 break;
 
             case 3:
                 validacion_numeros();
-                resultado=Multiplicacion(num1, num2);
+                resol = Multiplicacion(num1, num2);
+                MostrarResultadoFloat(resol);
                 break;
 
             case 4:
                 validacion_numeros();
-                resultado=Division(num1, num2);
+                if (num2 != 0) {
+                    resol = Division(num1, num2);
+                    MostrarResultadoFloat(resol);
+                    }else {
+                    System.out.println("La división por 0 no está definida");
+                    System.out.println("");
+                }
                 break;
 
             case 5:
                 validacion_numeros();
-                resultado=Comparacion(num1, num2);
+                resol=Comparacion(num1, num2);
+                MostrarResultadoFloat(resol);
                 break;
 
             case 6:
                 validacion_numeros();
-                resultado=Potencia(num1, num2);
+                resol=Potencia(num1, num2);
+                MostrarResultadoFloat(resol);
                 break;
 
             case 7:
@@ -67,7 +78,7 @@ public class CalculadoraConMetodos {
             default:
                 System.out.println("Elección invalida");
         }
-        return resultado;
+        return resol;
 
     }
 
@@ -116,13 +127,13 @@ public class CalculadoraConMetodos {
     }
 
     static float Resta(int num1, int num2) {
-        //Restara 2 Valores  enteros y los almacenara dentro de una variable int
+        //Resta dos valores enteros y los devuelve dentro de una variable int.
         int resta = num1 - num2;
         return resta;
     }
 
     static float Multiplicacion(int num1, int num2) {
-        //Multiplicara 2 Valores enteros , devolviendo un int
+        //Multiplica dos valores enteros, devolviendo un int.
         int mult = (num1 * num2);
         return mult;
     }
@@ -150,5 +161,10 @@ public class CalculadoraConMetodos {
             pot = pot * num1;
         }
         return pot;
+    }
+
+    static void MostrarResultadoFloat(float result){
+        System.out.println("El resultado de la operación es: " +result);
+        System.out.println("");
     }
 }
