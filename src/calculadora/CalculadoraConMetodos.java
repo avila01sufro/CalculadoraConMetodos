@@ -118,7 +118,7 @@ public class CalculadoraConMetodos {
 
                 flag = 0;
             }
-        }while(flag==0);
+        }while (flag==0);
      }
 
     static float Suma(int num1, int num2) {
