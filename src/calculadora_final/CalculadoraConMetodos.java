@@ -119,7 +119,7 @@ public class CalculadoraConMetodos {
         return mult;
     }
 
-    static float Division(int num1, int num2) {
+    static float Division(float num1, float num2) {
         //Dividira 2 valores enteros (el sdo numero no puede ser 0) , devolvera un float
         float div = (num1 / num2);
         return div;
