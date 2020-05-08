@@ -12,7 +12,7 @@ public class CalculadoraConMetodos {
             while(opcion !=7) {
                 menu();
                 validacion_menu();
-                validacion_numeros();
+                
                 resultado = menu_opciones();
                 System.out.println("La operacion retorna: " + resultado);
             }
@@ -30,26 +30,32 @@ public class CalculadoraConMetodos {
         switch (opcion) {
 
             case 1:
+                validacion_numeros();
                 resultado=Suma(num1, num2);
                 break;
 
             case 2:
+                validacion_numeros();
                 resultado=Resta(num1, num2);
                 break;
 
             case 3:
+                validacion_numeros();
                 resultado=Multiplicacion(num1, num2);
                 break;
 
             case 4:
+                validacion_numeros();
                 resultado=Division(num1, num2);
                 break;
 
             case 5:
+                validacion_numeros();
                 resultado=Comparacion(num1, num2);
                 break;
 
             case 6:
+                validacion_numeros();
                 resultado=Potencia(num1, num2);
                 break;
 
