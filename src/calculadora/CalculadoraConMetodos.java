@@ -8,12 +8,14 @@ public class CalculadoraConMetodos {
     static int num1, num2, opcion;
     public static void main(String[] args) {
             float resultado=0;
-            menu();
-            validacion_menu();
-            validacion_numeros();
-            resultado=menu_opciones();
-            System.out.println("La operacion retorna: "+resultado);
 
+            while(opcion !=7) {
+                menu();
+                validacion_menu();
+                validacion_numeros();
+                resultado = menu_opciones();
+                System.out.println("La operacion retorna: " + resultado);
+            }
 
     }
 
@@ -71,11 +73,11 @@ public class CalculadoraConMetodos {
          do {
              flag=1;
             try {
-                System.out.println("Ingrese la opcion: ");
+                System.out.println("Ingrese la opción: ");
                 opcion = teclado.nextInt();
 
             } catch (Exception e) {
-                System.out.println("error, ingrese nuevamente");
+                System.out.println("Error, ingrese nuevamente");
                 teclado.next();
                 //opcion=0;
                 flag=0;
@@ -93,7 +95,7 @@ public class CalculadoraConMetodos {
                 num1 = teclado.nextInt();
                 num2 = teclado.nextInt();
             } catch (Exception e) {
-                System.out.println("error, reingrese numeros");
+                System.err.println("Error, reingrese numeros: ");
                 teclado.next();
 
                 flag = 0;
@@ -120,13 +122,13 @@ public class CalculadoraConMetodos {
     }
 
     static float Division(float num1, float num2) {
-        //Dividira 2 valores enteros (el sdo numero no puede ser 0) , devolvera un float
-        float div = (num1 / num2);
-        return div;
-    }
+        // Divide dos valores enteros (el 2do número no puede ser 0), y devolverá un float como resultado.
+
+            float div = (num1 / num2);
+            return div;}
 
     static float Comparacion(int num1, int num2) {
-        //compara los 2 numeros con condicional if
+        // Compara ambos números con el condicional "if".
         if (num1 > num2) {
             return num1;
         } else {
@@ -135,8 +137,8 @@ public class CalculadoraConMetodos {
     }
 
     static float Potencia(int num1, int num2) {
-        /*potencia el primer numero con el sdo. "pot" ira almacenando el valor resultante
-         en cada iteracion del bucle "for". por cada ciclo, el numero se ira multiplicando por su potencia anterior */
+        /* Potencia el primer numero usando como exponente el segundo. "pot" ira almacenando el valor resultante
+         en cada iteracion del bucle "for", y por cada ciclo, el numero se ira multiplicando por su potencia anterior. */
         int pot = 1;
         for (int i = 0; i < num2; i++) {
             pot = pot * num1;
